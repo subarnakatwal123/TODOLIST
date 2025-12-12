@@ -30,3 +30,27 @@ class Cat(Animal):
 class fish(Animal):
     pass
 
+class BankAccount:
+    def __init__(self, name, balance):
+        self.name = name
+        self.balance = balance
+    
+    def withdraw (self, amount):
+        
+        if amount > self.balance:
+            print("insufficent balance")
+        else:
+            self.balance -= amount
+            print(f"your new balance after withdrawing {amount} is : {self.balance}")
+    def deposit (ramesh, amount):
+        ramesh.balance += amount
+        print("deposit successful")
+
+class book:
+    def __init__(self, title, author, pages):
+        self.title = title
+        self.author = author
+        self.pages = pages
+    
+    def reads (self):
+        print(f"reading {self.title} ")

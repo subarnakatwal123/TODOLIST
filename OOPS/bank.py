@@ -1,5 +1,5 @@
 import random
-money = {179543200013 : 20000, 179543200014 : 10000}
+money = {179543200013 : 20000, 1 : 10000}
 corresponds = {"subwrn@gmail.com": [179543200013,"subarna123", "subarna",9839393939,]}
 def operations(email):
     while True:
@@ -11,6 +11,9 @@ def operations(email):
                 accno = int (input("enter receivers ac/no: "))
                 if accno in money:
                     howmuch = int (input("enter how much ? "))
+                    if howmuch <10:
+                        print("balance must be greater than 10")
+                        break
                     if money[corresponds[email][0]] > howmuch:
                         money[accno] += howmuch
                         money[corresponds[email][0]] -= howmuch
